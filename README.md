@@ -1,8 +1,49 @@
-# twp
+# Trello WordPress
 
-## Project setup
+
+## Installation
+
+### Install Wordpress API
+Open a terminal in your */var/www/html* folder. Be sure your than apache web server is running by visiting [your localhost](http://localhost/).
+
+Then down download the wordpress package and install it by using the following commands:
+```
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xzvf latest.tar.gz
+sudo chown $USER:$USER wordpress
+```
+
+Go on your [phpmyadmin](http://localhost/phpmyadmin/index.php) using your own login method (do not use root, please). In phpmyadmin:
+
+* Create a new database for your API, with empty tables, using **utf8mb4_general_ci** encoding.
+* Click the phpMyAdmin icon in the upper left to return to the main page, then click the Users tab.
+* Click the Edit privileges icon on the user you’ve just created for WordPress.
+* In the Database-specific privileges section, select the database you’ve just created for WordPress under the Add privileges to the following database dropdown, and click Go.
+* The page will refresh with privileges for that database. Click Check All to select all privileges, and click Go.
+* On the resulting page, make note of the host name listed after Server: at the top of the page. (This will usually be localhost.)
+
+Now, visit http://localhost/wordpress/wp-admin/install.php, and enter the fields corresponding to your database and user informations.
+
+If the wp-config.php file is not automaticaly created, do it in your wordpress root directory.
+
+Relaunch [the php file](localhost/wordpress/wp-admin/install.php) for installation, and complete the information for your api website.
+
+Your wordpress api website should be now implemented. You can verify it by accessing to the [adminstration page](http://localhost/wordpress/wp-admin/).
+
+### Project setup
+
+First, you'll have to clone then install all dependencies own by this project by using
+
 ```
 npm install
+```
+
+If you want to create your own Vue.js Application, use the following commands, to install the project and dependencies:
+
+```
+vue create [project_name]
+cd [project_name]
+npm install vue-router vuex
 ```
 
 ### Compiles and hot-reloads for development
