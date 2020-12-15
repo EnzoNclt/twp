@@ -3,7 +3,7 @@
 
 ## Installation
 
-### Install Wordpress API
+### Install Wordpress Website
 Open a terminal in your */var/www/html* folder. Be sure your than apache web server is running by visiting [your localhost](http://localhost/).
 
 Then down download the wordpress package and install it by using the following commands:
@@ -28,7 +28,40 @@ If the wp-config.php file is not automaticaly created, do it in your wordpress r
 
 Relaunch [the php file](localhost/wordpress/wp-admin/install.php) for installation, and complete the information for your api website.
 
-Your wordpress api website should be now implemented. You can verify it by accessing to the [adminstration page](http://localhost/wordpress/wp-admin/).
+Your wordpress website should be now implemented. You can verify it by accessing to the [adminstration page](http://localhost/wordpress/wp-admin/).
+
+### Install Wordpress API
+Now, go to your /var/www/html/wordpress/wp-content/plugins folder in a terminal, using the following command
+```
+cd /var/www/html/wordpress/wp-content/plugins
+```
+
+Download the rest-api wordpress using wget, and unzip it:
+```
+wget https://downloads.wordpress.org/plugin/rest-api.2.0-beta15.zip
+unzip rest-api.2.0-beta15.zip
+```
+
+Check if there is a rest-api folder. Now, go on your wordpress administration page, then go to **Plugins > Installed Plugins** and activate **WP REST API**.
+
+You should be able now to have the following result by using the command:
+```
+curl -i "http://localhost/wordpress/wp-json"  --head
+```
+**Result:**
+
+```
+HTTP/1.1 200 OK
+Date: Tue, 15 Dec 2020 10:58:03 GMT
+Server: Apache/2.4.41 (Ubuntu)
+X-Robots-Tag: noindex
+Link: <http://localhost/wordpress/wp-json/>; rel="https://api.w.org/"
+X-Content-Type-Options: nosniff
+Access-Control-Expose-Headers: X-WP-Total, X-WP-TotalPages, Link
+Access-Control-Allow-Headers: Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type
+Allow: GET
+Content-Type: application/json; charset=UTF-8
+```
 
 ### Project setup
 
