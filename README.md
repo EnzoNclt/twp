@@ -76,7 +76,7 @@ If you want to create your own Vue.js Application, use the following commands, t
 ```
 vue create [project_name]
 cd [project_name]
-npm install vue-router vuex
+npm install vue-router vuex vuedraggable bootstrap-vue
 ```
 
 ### Compiles and hot-reloads for development
