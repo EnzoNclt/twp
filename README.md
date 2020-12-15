@@ -26,7 +26,7 @@ Now, visit http://localhost/wordpress/wp-admin/install.php, and enter the fields
 
 If the wp-config.php file is not automaticaly created, do it in your wordpress root directory.
 
-Relaunch [the php file](localhost/wordpress/wp-admin/install.php) for installation, and complete the information for your api website.
+Relaunch [the php file](http://localhost/wordpress/wp-admin/install.php) for installation, and complete the information for your api website.
 
 Your wordpress website should be now implemented. You can verify it by accessing to the [adminstration page](http://localhost/wordpress/wp-admin/).
 
