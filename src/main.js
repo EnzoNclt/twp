@@ -21,8 +21,8 @@ const store = new Vuex.Store({
   state() {
     return {
       todos: [
-        { id: 1, text: 'test1', done: true },
-        { id: 2, text: 'test2', done: false },
+        { id: 1, task: 'test1', done: true },
+        { id: 2, task: 'test2', done: false },
       ]
     }
   },
