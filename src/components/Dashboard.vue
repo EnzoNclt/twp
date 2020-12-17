@@ -1,17 +1,7 @@
 <template>
   <div class="container mt-5">
-    <div class="row">
-      <div class="col form-inline">
-        <b-form-input
-          id="input-2"
-          v-model="newTask"
-          required
-          placeholder="Enter Task"
-          @keyup.enter="add"
-        ></b-form-input>
-        <b-button @click="add" variant="primary" class="ml-3">Add</b-button>
-      </div>
-    </div>
+    <TodoNew />
+    <TodoList />
     <div class="row mt-5">
       <div class="col-3">
         <div class="p-2 alert alert-secondary">
@@ -99,12 +89,16 @@
 <script>
 //import draggable
 import draggable from "vuedraggable";
+import TodoNew from "@/components/TodoNew.vue";
+import TodoList from "@/components/TodoList.vue";
 
 export default {
   name: "twp-board",
   components: {
     //import draggable as a component
-    draggable
+    draggable,
+    TodoNew,
+    TodoList
   },
   data() {
     return {
