@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "833a5eea-e9a5-42b7-810d-cd83bc1b3aea",
-		"name": "WordPress API",
+		"_postman_id": "760fdcf9-c9d8-4cef-a33f-e0fa24eb64d2",
+		"name": "WordPress API Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -177,7 +177,7 @@
 			"response": []
 		},
 		{
-			"name": "Pages Revisions WP",
+			"name": "Get PAGE (id)",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -201,7 +201,7 @@
 			"response": []
 		},
 		{
-			"name": "Posts Revisions WP",
+			"name": "Get POST (id)",
 			"request": {
 				"method": "GET",
 				"header": [],
