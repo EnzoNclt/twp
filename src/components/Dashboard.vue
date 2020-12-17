@@ -1,28 +1,10 @@
 <template>
   <div class="container mt-5">
     <TodoNew />
-    <TodoList />
+    
     <div class="row mt-5">
-      <div class="col-3">
-        <div class="p-2 alert alert-secondary">
-          <h3>Back Log</h3>
-          <!-- Backlog draggable component. Pass arrBackLog to list prop -->
-          <draggable
-            class="list-group twp-column"
-            :list="arrBackLog"
-            group="tasks"
-          >
-            <div
-              class="list-group-item"
-              v-for="element in arrBackLog"
-              :key="element.name"
-            >
-              {{ element.name }}
-            </div>
-          </draggable>
-        </div>
-      </div>
-
+      
+      <TodoList title="To DO"/>
       <div class="col-3">
         <div class="p-2 alert alert-primary">
           <h3>In Progress</h3>
